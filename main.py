@@ -1,8 +1,6 @@
 from replit import clear
 from art import logo
 
-print(logo)
-
 user_result = ""
 
 
@@ -25,7 +23,8 @@ operations = {
   "/": divide
 }
 def calculator():
-  num1 = int(input("What is the first number? "))
+  print(logo)
+  num1 = float(input("What is the first number? "))
   
   for symbol in operations:
     print(symbol)
@@ -33,7 +32,7 @@ def calculator():
   user_continue = True
   while user_continue == True:
     operation_symbol = input("Pick an operation from the line above: ")
-    num2 = int(input("What is the second number? "))
+    num2 = float(input("What is the second number? "))
     user_operation = operations[operation_symbol]
     user_result = user_operation(n1=num1, n2=num2)
     
